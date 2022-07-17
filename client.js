@@ -25,5 +25,7 @@ function addEmployee() {
         <td>${annualSalary}</td>
     </tr>
  `)
+
+ $( 'input' ).val('');
  
 }

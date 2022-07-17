@@ -16,7 +16,7 @@ A 'Submit' button should collect the form information, store the information to 
 [x] - get the values of the input fields
 [x] - create a table to hold the values of the inputs
 [x] - append the values of the input fields to the table
-[] - clear the input fields
+[x] - clear the input fields after submited
 
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
