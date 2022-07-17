@@ -11,10 +11,19 @@ function readyNow() {
 
 function addEmployee() {
  let firstName = $( '#firstNameInput' ).val();
- let lastName = $( '#lastNameInpute' ).val();
+ let lastName = $( '#lastNameInput' ).val();
  let employeeID =  $( '#employeeID' ).val();
  let jobTitle = $( '#jobTitle' ).val();
  let annualSalary = $( '#annualSalary' ).val();
 
- console.log('add an employee', firstName);
+ $( '#employee-table' ).append(`
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${employeeID}</td>
+        <td>${jobTitle}</td>
+        <td>${annualSalary}</td>
+    </tr>
+ `)
+ 
 }
