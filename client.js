@@ -42,6 +42,10 @@ $( '#total-monthly' ).html(`
     Total Monthly: ${monthlyTotal}
     `)
 
+if(monthlyTotal > 20000) {
+    $( '#total-monthly' ).css( 'background-color', 'red');
+}
+
  $( '#employee-table' ).append(`
     <tr>
         <td>${firstName}</td>
