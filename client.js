@@ -6,7 +6,14 @@ function readyNow() {
     console.log('ready now!');
     $( 'h1' ).text('Salary Calculator'); //make sure jquery is working correctly
     $( '#submit' ).on( 'click', addEmployee);
+    $( 'body' ).on( 'click', '.deleteBtn', removeEmployee);
 } // end readyNow
+
+function removeEmployee() {
+    console.log('remove employee');
+    let employee = $ ( this ).parent().parent();
+    employee.remove();
+}
 
 
 function addEmployee() {
@@ -23,9 +30,12 @@ function addEmployee() {
         <td>${employeeID}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
+        <td>
+            <button class="deleteBtn">Delete</button>
+        </td>
     </tr>
  `)
 
  $( 'input' ).val('');
  
-}
+} // end addEmployee
