@@ -9,15 +9,8 @@ function readyNow() {
     $( 'body' ).on( 'click', '.deleteBtn', removeEmployee);
 } // end readyNow
 
-function removeEmployee() {
-    console.log('remove employee');
-    let employee = $ ( this ).parent().parent();
-    employee.remove();
-} //end removeEmployee
 
 let employeeList = [];
-
-
 
 function addEmployee() {
  let firstName = $( '#firstNameInput' ).val();
@@ -36,6 +29,19 @@ function addEmployee() {
  employeeList.push(employee);
  console.log(employeeList);
 
+ let yearlyTotal = 0
+    for( let worker of employeeList ) {
+        let yearlySalary = parseInt(worker.salary);
+        yearlyTotal += yearlySalary;
+    }
+let monthlyTotal = yearlyTotal / 12
+
+    console.log(yearlyTotal);
+    console.log(monthlyTotal);
+$( '#total-monthly' ).html(`
+    Total Monthly: ${monthlyTotal}
+    `)
+
  $( '#employee-table' ).append(`
     <tr>
         <td>${firstName}</td>
@@ -52,5 +58,12 @@ function addEmployee() {
  $( 'input' ).val('');
  
 } // end addEmployee
+
+function removeEmployee() {
+    console.log('remove employee');
+    let employee = $ ( this ).parent().parent();
+    employee.remove();
+} //end removeEmployee
+
 
 
