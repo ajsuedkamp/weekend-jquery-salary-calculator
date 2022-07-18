@@ -17,10 +17,11 @@ A 'Submit' button should collect the form information, store the information to 
 [x] - create a table to hold the values of the inputs
 [x] - append the values of the input fields to the table
 [x] - clear the input fields after submited
+[x] - create an array to hold the employee information
 
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
-[] - create a delete button that removes employee
+[x] - create a delete button that removes employee
 
 ### Files Provided
 No files have been provided (just instructions.md and a readme.md). Instead of forking and cloning this repo, please choose "Use This Template" (green button) and name your new repo "weekend-jquery-salary-calculator" and clone down from there. Make sure to commit regularily!

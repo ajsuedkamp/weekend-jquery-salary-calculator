@@ -13,7 +13,10 @@ function removeEmployee() {
     console.log('remove employee');
     let employee = $ ( this ).parent().parent();
     employee.remove();
-}
+} //end removeEmployee
+
+let employeeList = [];
+
 
 
 function addEmployee() {
@@ -22,6 +25,16 @@ function addEmployee() {
  let employeeID =  $( '#employeeID' ).val();
  let jobTitle = $( '#jobTitle' ).val();
  let annualSalary = $( '#annualSalary' ).val();
+
+ const employee = {
+    name: firstName + ' ' + lastName,
+    id: employeeID,
+    title: jobTitle,
+    salary: annualSalary,
+ }
+
+ employeeList.push(employee);
+ console.log(employeeList);
 
  $( '#employee-table' ).append(`
     <tr>
@@ -39,3 +52,5 @@ function addEmployee() {
  $( 'input' ).val('');
  
 } // end addEmployee
+
+
